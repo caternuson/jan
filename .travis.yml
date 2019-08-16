@@ -2,7 +2,7 @@ sudo: required
 dist: xenial
 language: c
 
-before script:
+install:
   - sudo apt-get install gcc-avr binutils-avr avr-libc
 script:
   - make clean
