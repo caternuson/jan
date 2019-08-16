@@ -52,20 +52,20 @@
  */
 struct cRGB
 { 
-  uint8_t g; /** Green */
-  uint8_t r; /** Red */
-  uint8_t b; /** Blue */
+  uint8_t g; /**< Green */
+  uint8_t r; /**< Red */
+  uint8_t b; /**< Blue */
 };
 
 /**
- * A structure to hold RGB color
+ * A structure to hold RGBW color
  */
 struct cRGBW
 {
-  uint8_t g; /** Green */
-  uint8_t r; /** Red */
-  uint8_t b; /** Blue */
-  uint8_t w; /** White */
+  uint8_t g; /**< Green */
+  uint8_t r; /**< Red */
+  uint8_t b; /**< Blue */
+  uint8_t w; /**< White */
 };
 
 
