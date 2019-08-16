@@ -22,6 +22,7 @@
 
 /**
  * @brief Main is where is all begins.
+ * @return exit status code
  */
 #include "jan.h"
 
