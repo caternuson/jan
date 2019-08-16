@@ -1,5 +1,5 @@
 sudo: required
-dist: xenial
+dist: bionic
 language: c
 
 install:
@@ -7,7 +7,7 @@ install:
 
 before_script:
   - avr-gcc --version
-  
+
 script:
   - make clean
   - make

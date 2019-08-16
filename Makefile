@@ -19,7 +19,7 @@ CC          = $(TOOLCHAIN)-gcc
 OBJCOPY     = $(TOOLCHAIN)-objcopy
 
 CFLAGS = -g2 -mmcu=$(MCU_TARGET) -DF_CPU=$(F_CPU)
-CFLAGS+= -Os -c99 -ffunction-sections -fdata-sections -fpack-struct -fno-move-loop-invariants -fno-tree-scev-cprop -fno-inline-small-functions
+CFLAGS+= -Os -std=c99 -ffunction-sections -fdata-sections -fpack-struct -fno-move-loop-invariants -fno-tree-scev-cprop -fno-inline-small-functions
 CFLAGS+= -Wall -Wno-pointer-to-int-cast
 
 ifeq ($(DEBUG), 1)
