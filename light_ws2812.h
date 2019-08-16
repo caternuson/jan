@@ -47,8 +47,26 @@
  * cRGBW:    RGBW for SK6812RGBW
  */
 
-struct cRGB  { uint8_t g; uint8_t r; uint8_t b; };
-struct cRGBW { uint8_t g; uint8_t r; uint8_t b; uint8_t w;};
+/**
+ * A structure to hold RGB color
+ */
+struct cRGB
+{ 
+  uint8_t g; /** Green */
+  uint8_t r; /** Red */
+  uint8_t b; /** Blue */
+};
+
+/**
+ * A structure to hold RGB color
+ */
+struct cRGBW
+{
+  uint8_t g; /** Green */
+  uint8_t r; /** Red */
+  uint8_t b; /** Blue */
+  uint8_t w; /** White */
+};
 
 
 
