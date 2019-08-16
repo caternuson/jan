@@ -18,8 +18,8 @@
  * @author Carter Nelson
  * @brief Firmware for Jan
  * 
- * /
- * 
+ */
+
 #include "jan.h"
 
 int main() {
