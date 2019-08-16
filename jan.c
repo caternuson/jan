@@ -12,6 +12,14 @@
 //                |4 GND  PB0 5| - neopixels
 //                +------------+
 //========================================================================
+
+/**
+ * @file jan.c
+ * @author Carter Nelson
+ * @brief Firmware for Jan
+ * 
+ * /
+ * 
 #include "jan.h"
 
 int main() {
