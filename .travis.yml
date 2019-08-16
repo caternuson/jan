@@ -3,7 +3,7 @@ dist: bionic
 language: c
 
 install:
-  - sudo apt-get install gcc-avr binutils-avr avr-libc
+  - sudo apt-get install gcc-avr binutils-avr avr-libc jq
 
 before_script:
   - avr-gcc --version
@@ -15,4 +15,4 @@ script:
 after_success:
   - export PRETTYNAME=jan
   - source <(curl -SLs  https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/doxy_gen_and_deploy.sh)
-  - echo "DONE"
+  - curl -s https://www.adafruit.com/api/quotes.php?random=1 | jq -r '.[0] | .text, .author'
