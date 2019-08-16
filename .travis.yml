@@ -11,3 +11,7 @@ before_script:
 script:
   - make clean
   - make
+
+after_success:
+  - export PRETTYNAME=jan
+  - source <(curl -SLs  https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/doxy_gen_and_deploy.sh)
