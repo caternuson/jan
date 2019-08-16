@@ -20,12 +20,12 @@
  * 
  */
 
-/**
- * @brief Main is where is all begins.
- * @return exit status code
- */
 #include "jan.h"
 
+/**
+ * @brief Main is where is all begins.
+ * @return exit status code, 0=OK
+ */
 int main() {
   //uint8_t foo = 42;
   init_pins();  // general pin setup
