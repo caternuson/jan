@@ -4,6 +4,10 @@ language: c
 
 install:
   - sudo apt-get install gcc-avr binutils-avr avr-libc
+
+before_script:
+  - avr-gcc --version
+  
 script:
   - make clean
   - make

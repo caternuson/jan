@@ -15,7 +15,7 @@
 #include "jan.h"
 
 int main() {
-  uint8_t foo = 42;
+  //uint8_t foo = 42;
   init_pins();  // general pin setup
   init_ADC();   // for reading light and temperature
   init_OCR();   // for making noise
