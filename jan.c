@@ -20,6 +20,9 @@
  * 
  */
 
+/**
+ * @brief Main is where is all begins.
+ */
 #include "jan.h"
 
 int main() {
