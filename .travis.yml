@@ -3,7 +3,7 @@ dist: bionic
 language: c
 
 install:
-  - sudo apt-get install gcc-avr binutils-avr avr-libc jq
+  - sudo apt-get install gcc-avr binutils-avr avr-libc jq doxygen
 
 before_script:
   - avr-gcc --version
@@ -13,8 +13,8 @@ script:
   - make
 
 after_success:
-  - export PRETTYNAME=jan
-  - source <(curl -SLs  https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/doxy_gen_and_deploy.sh)
+  - echo "DOXYGEN BUILD"
+  - source <(curl -SLs  https://raw.githubusercontent.com/caternuson/travis-ci/master/doxygen_generate.sh)
   - echo "DONE."
 
 after_failure:
