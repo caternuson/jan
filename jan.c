@@ -1,21 +1,28 @@
 /****************************************************************************
  * @file jan.c
  * @author Carter Nelson
- * @brief Firmware for Jan
+ *
+ *
+  * @section intro_sec Overview
  * 
  * Jan's Brains
  * Coded for 2019 PCB Just 4 Fun
  * https://github.com/caternuson/2019-PCBs-Just-4-Fun
  * 
- * Pinout Summary::
- * 
+ * Pinout Summary:
+ * ```
  *                +------------+
  *                |1 PB5  VCC 8|
  *                |2 PB3  PB2 7| - light
  *  temperature - |3 PB4  PB1 6| - speaker
  *                |4 GND  PB0 5| - neopixels
  *                +------------+
- ***************************************************************************/
+ * ```
+ * 
+ * @section author Author
+ * 
+ * Written by Carter Nelson
+  ***************************************************************************/
 
 #include "jan.h"
 
