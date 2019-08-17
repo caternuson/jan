@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['auto_5fwrite_69',['auto_write',['../neopixels_8c.html#ac0184d61732e31539603650137f883df',1,'neopixels.c']]]
+  ['auto_5fwrite_80',['auto_write',['../neopixels_8c.html#afa8a8ee5416bd71b2f855a2aeef96836',1,'neopixels.c']]]
 ];

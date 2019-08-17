@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['buzzer_5foff_54',['buzzer_off',['../speaker_8c.html#a24fa3be09145df7e4437e045c95c71c7',1,'buzzer_off():&#160;speaker.c'],['../speaker_8h.html#a24fa3be09145df7e4437e045c95c71c7',1,'buzzer_off():&#160;speaker.c']]],
-  ['buzzer_5fon_55',['buzzer_on',['../speaker_8c.html#ad3aa1bd03111b830d687a9278acf6dcb',1,'buzzer_on():&#160;speaker.c'],['../speaker_8h.html#ad3aa1bd03111b830d687a9278acf6dcb',1,'buzzer_on():&#160;speaker.c']]]
+  ['color_5fwheel_60',['color_wheel',['../neopixels_8c.html#a12ebd6fad03ddbc25346f70431190981',1,'color_wheel(uint8_t pos):&#160;neopixels.c'],['../neopixels_8h.html#a12ebd6fad03ddbc25346f70431190981',1,'color_wheel(uint8_t pos):&#160;neopixels.c']]]
 ];

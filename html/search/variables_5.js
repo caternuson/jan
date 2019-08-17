@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['w_74',['w',['../structc_r_g_b_w.html#abfc0000c92f6417e02073f2b751aa178',1,'cRGBW']]]
+  ['w_86',['w',['../structc_r_g_b_w.html#abfc0000c92f6417e02073f2b751aa178',1,'cRGBW']]]
 ];
