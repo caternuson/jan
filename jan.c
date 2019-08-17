@@ -7,7 +7,7 @@
  * Coded for 2019 PCB Just 4 Fun
  * https://github.com/caternuson/2019-PCBs-Just-4-Fun
  * 
- * Pinout Summary:
+ * Pinout Summary::
  * 
  *                +------------+
  *                |1 PB5  VCC 8|

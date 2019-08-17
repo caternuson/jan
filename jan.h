@@ -1,7 +1,7 @@
 /****************************************************************************
  * @file jan.h
  * @author Carter Nelson
- * @brief Board initialization
+ * @brief Firmware for Jan
  ***************************************************************************/
 #ifndef __neo_temp_h__
 #define __neo_temp_h__
