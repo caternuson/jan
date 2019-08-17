@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../jan_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'jan.c']]]
+  ['w',['w',['../structc_r_g_b_w.html#abfc0000c92f6417e02073f2b751aa178',1,'cRGBW']]]
 ];
