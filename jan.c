@@ -1,33 +1,29 @@
-//========================================================================
-// jan.c
-//
-// Jan's Brains
-// Coded for 2019 PCB Just 4 Fun
-// https://github.com/caternuson/2019-PCBs-Just-4-Fun
-//
-//                +------------+
-//                |1 PB5  VCC 8|
-//                |2 PB3  PB2 7| - light
-//  temperature - |3 PB4  PB1 6| - speaker
-//                |4 GND  PB0 5| - neopixels
-//                +------------+
-//========================================================================
-
-/**
+/****************************************************************************
  * @file jan.c
  * @author Carter Nelson
  * @brief Firmware for Jan
  * 
- */
+ * Jan's Brains
+ * Coded for 2019 PCB Just 4 Fun
+ * https://github.com/caternuson/2019-PCBs-Just-4-Fun
+ * 
+ * Pinout Summary:
+ * 
+ *                +------------+
+ *                |1 PB5  VCC 8|
+ *                |2 PB3  PB2 7| - light
+ *  temperature - |3 PB4  PB1 6| - speaker
+ *                |4 GND  PB0 5| - neopixels
+ *                +------------+
+ ***************************************************************************/
 
 #include "jan.h"
 
-/**
- * @brief Main is where is all begins.
- * @return exit status code, 0=OK
- */
+/****************************************************************************
+ * @brief The main enty point.
+ * @return exit status code
+ ***************************************************************************/
 int main() {
-  //uint8_t foo = 42;
   init_pins();  // general pin setup
   init_ADC();   // for reading light and temperature
   init_OCR();   // for making noise
