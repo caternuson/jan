@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['w',['w',['../structc_r_g_b_w.html#abfc0000c92f6417e02073f2b751aa178',1,'cRGBW']]]
+  ['light_2ec_14',['light.c',['../light_8c.html',1,'']]],
+  ['light_2eh_15',['light.h',['../light_8h.html',1,'']]]
 ];
