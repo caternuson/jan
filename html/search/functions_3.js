@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_57',['main',['../jan_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'jan.c']]]
+  ['light_5fdance_60',['light_dance',['../neopixels_8c.html#ac53083c14f9e347b6144c00e91ac04f7',1,'light_dance():&#160;neopixels.c'],['../neopixels_8h.html#ac53083c14f9e347b6144c00e91ac04f7',1,'light_dance():&#160;neopixels.c']]]
 ];

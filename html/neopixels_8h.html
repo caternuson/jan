@@ -87,8 +87,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad6d36b590991eed6603a0d5d17ce2504"><td class="memItemLeft" align="right" valign="top"><a id="ad6d36b590991eed6603a0d5d17ce2504"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>color_wheel</b> (uint8_t pos, float scale)</td></tr>
+<tr class="memitem:ad6d36b590991eed6603a0d5d17ce2504"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neopixels_8h.html#ad6d36b590991eed6603a0d5d17ce2504">color_wheel</a> (uint8_t pos, float scale)</td></tr>
+<tr class="memdesc:ad6d36b590991eed6603a0d5d17ce2504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Circular color value generator.  <a href="neopixels_8h.html#ad6d36b590991eed6603a0d5d17ce2504">More...</a><br /></td></tr>
 <tr class="separator:ad6d36b590991eed6603a0d5d17ce2504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fefb5f726e78ab9c006cccf5587f955"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="neopixels_8h.html#a7fefb5f726e78ab9c006cccf5587f955">pixels_fill</a> (uint32_t color)</td></tr>
 <tr class="memdesc:a7fefb5f726e78ab9c006cccf5587f955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill all pixels with the specified color.  <a href="neopixels_8h.html#a7fefb5f726e78ab9c006cccf5587f955">More...</a><br /></td></tr>
@@ -114,6 +114,44 @@ struct <a class="el" href="structc_r_g_b.html">cRGB</a>&#160;</td><td class="mem
 <div class="textblock"><p>NeoPixel related functions. </p>
 <dl class="section author"><dt>Author</dt><dd>Carter Nelson </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="ad6d36b590991eed6603a0d5d17ce2504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6d36b590991eed6603a0d5d17ce2504">&#9670;&nbsp;</a></span>color_wheel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t color_wheel </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Circular color value generator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The wheel position, 0-255. </td></tr>
+    <tr><td class="paramname">scale</td><td>Brightness. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The 32 bit color value. </dd></dl>
+
+</div>
+</div>
 <a id="a7fefb5f726e78ab9c006cccf5587f955"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7fefb5f726e78ab9c006cccf5587f955">&#9670;&nbsp;</a></span>pixels_fill()</h2>
 
