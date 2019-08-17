@@ -1,3 +1,8 @@
+/****************************************************************************
+ * @file neopixel.h
+ * @author Carter Nelson
+ * @brief NeoPixel related functions.
+ ***************************************************************************/
 #ifndef __neopixels_h__
 #define __neopixels_h__
 

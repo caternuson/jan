@@ -1,3 +1,8 @@
+/****************************************************************************
+ * @file light.h
+ * @author Carter Nelson
+ * @brief Light sensor related functions
+ ***************************************************************************/
 #ifndef __light_h__
 #define __light_h__
 

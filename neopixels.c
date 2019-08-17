@@ -1,13 +1,18 @@
-//========================================================================
-// neopixel stuff
-//========================================================================
+/****************************************************************************
+ * @file neopixel.c
+ * @author Carter Nelson
+ * @brief NeoPixel related functions.
+ ***************************************************************************/
 #include "neopixels.h"
 
 uint8_t auto_write = 0;
 
-
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
+/****************************************************************************
+ * @brief Circular color value generator.
+ * @param pos The wheel position, 0-255.
+ * @param scale Brightness.
+ * @return The 32 bit color value.
+ ***************************************************************************/
 uint32_t color_wheel(uint8_t pos, float scale) {
   uint32_t r, g, b;
   pos = 255 - pos;
@@ -30,6 +35,10 @@ uint32_t color_wheel(uint8_t pos, float scale) {
   return r << 16 | g << 8 | b;
 }
 
+/****************************************************************************
+ * @brief Fill all pixels with the specified color.
+ * @param color The 32 bit color value.
+ ***************************************************************************/
 void pixels_fill(uint32_t color) {
   for (int i=0; i<NUM_PIXELS; i++) {
     // jan's neopixels are GRB
@@ -39,7 +48,11 @@ void pixels_fill(uint32_t color) {
   }
   if (auto_write) ws2812_setleds(pixels, NUM_PIXELS);
 }
-
+/****************************************************************************
+ * @brief Set specified pixel to specified color.
+ * @param i The 0 based pixel index.
+ * @param color The 32 bit color value.
+ ***************************************************************************/
 void pixel_set_color(uint8_t i, uint32_t color) {
   pixels[i].g = color >> 16 & 0xff;
   pixels[i].r = color >>  8 & 0xff;
@@ -47,8 +60,9 @@ void pixel_set_color(uint8_t i, uint32_t color) {
   if (auto_write) ws2812_setleds(pixels, NUM_PIXELS);
 }
 
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
+/****************************************************************************
+ * @brief A dance light pattern
+ ***************************************************************************/
 void light_dance() {
   uint8_t current = auto_write;
   auto_write = 1;
@@ -71,8 +85,10 @@ void light_dance() {
   auto_write = current;
 }
 
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
+/****************************************************************************
+ * @brief Set the "tentacles" to specified color.
+ * @param color The 32 bit color value.
+ ***************************************************************************/
 void set_tentacles(uint32_t color) {
   uint8_t current = auto_write;
   auto_write = 0;  

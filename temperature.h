@@ -1,3 +1,8 @@
+/****************************************************************************
+ * @file temperature.h
+ * @author Carter Nelson
+ * @brief Temperature sensor related functions.
+ ***************************************************************************/
 #ifndef __temperature_h__
 #define __temperature_h__
 

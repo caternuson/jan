@@ -1,3 +1,8 @@
+/****************************************************************************
+ * @file speaker.h
+ * @author Carter Nelson
+ * @brief Piezo buzzer speaker related functions.
+ ***************************************************************************/
 #ifndef __speaker_h__
 #define __speaker_h__
 
