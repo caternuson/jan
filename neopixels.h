@@ -11,8 +11,8 @@
 
 #include "light_ws2812.h"
 
-#define NUM_PIXELS 5
-struct cRGB pixels[NUM_PIXELS];
+#define NUM_PIXELS 5            //!< The number of NeoPixels
+struct cRGB pixels[NUM_PIXELS]; //!< The array of NeoPixel data
 
 uint32_t color_wheel(uint8_t pos, float scale);
 void pixels_fill(uint32_t color);
