@@ -10,5 +10,5 @@
  * @return Raw ADC reading from temperature.
  ***************************************************************************/
 uint8_t read_temperature() {
-  return read_ADC(0x02);
+  return read_ADC(TEMPERATURE_MUX);
 }

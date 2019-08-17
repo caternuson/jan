@@ -9,6 +9,7 @@
 #include <avr/io.h>
 #include "adc.h"
 
+#define TEMPERATURE_MUX 0x02
 uint8_t read_temperature();
 
 #endif

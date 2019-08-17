@@ -8,8 +8,9 @@
 
 #include <avr/io.h>
 
-void set_buzzer(uint8_t value);
-void buzzer_on();
-void buzzer_off();
+void spk_init();
+void spk_set(uint8_t value);
+void spk_on();
+void spk_off();
 
 #endif

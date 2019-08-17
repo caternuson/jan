@@ -31,16 +31,33 @@
  * @return exit status code
  ***************************************************************************/
 int main() {
-  init_pins();  // general pin setup
-  init_ADC();   // for reading light and temperature
-  init_OCR();   // for making noise
+  init_pins();      // general pin setup
+  init_ADC();       // for reading light and temperature
+  spk_init();   // for making noise
 
-  light_dance();
-  set_tentacles(0x050505);
+  spk_on();
+  spk_set(10);
+  _delay_ms(500);
+  spk_set(20);
+  _delay_ms(500);
+  spk_set(30);
+  _delay_ms(500);
+  spk_set(40);
+  _delay_ms(500);
+  spk_set(50);
+  _delay_ms(500);  
+  spk_off();
+
+  //light_dance();
+  //set_tentacles(0x050505);
+
+  //neo_set_brightness(0.1);
+  //neo_set_aura(0xDEAD42);
 
   while (1) {
     for (int i=0; i<256; i++) {
-      set_tentacles(color_wheel(i, 0.1));
+      neo_set_aura(color_wheel(255-i));
+      neo_set_tentacles(color_wheel(i));
       _delay_ms(50);
     }
 

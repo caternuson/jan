@@ -8,6 +8,7 @@
 
 #include <avr/io.h>
 
+void init_ADC();
 uint8_t read_ADC(uint8_t mux);
 
 #endif

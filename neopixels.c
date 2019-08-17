@@ -5,65 +5,125 @@
  ***************************************************************************/
 #include "neopixels.h"
 
-uint8_t auto_write = 0; //!< Control auto writing of NeoPixel data
+bool auto_write = true; //!< Control auto writing of NeoPixel data
+float brightness = 0.1; //!< NeoPixel brightness
 
 /****************************************************************************
- * @brief Circular color value generator.
- * @param pos The wheel position, 0-255.
- * @param scale Brightness.
- * @return The 32 bit color value.
+ * @brief Set auto write state.
  ***************************************************************************/
-uint32_t color_wheel(uint8_t pos, float scale) {
-  uint32_t r, g, b;
-  pos = 255 - pos;
-  if (pos < 85) {
-    r = scale*(255 - pos * 3);
-    g = 0;
-    b = scale*(pos * 3);
-  } else if (pos < 170) {
-    pos -= 85;
-    r = 0;
-    g = scale*(pos * 3);
-    b = scale*(255 - pos * 3);
-  } else {
-    pos -= 170;
-    r = scale*(pos * 3);
-    g = scale*(255 - pos * 3);
-    b = 0;
-  }
+void neo_set_autowrite(bool value) {
+  auto_write = value;
+}
 
-  return r << 16 | g << 8 | b;
+/****************************************************************************
+ * @brief Get auto write state.
+ * @return Current auto write state.
+ ***************************************************************************/
+bool neo_get_autowrite() {
+  return auto_write;
 }
 
 /****************************************************************************
  * @brief Fill all pixels with the specified color.
  * @param color The 32 bit color value.
  ***************************************************************************/
-void pixels_fill(uint32_t color) {
+void neo_fill(uint32_t color) {
+  bool current = auto_write;
+  auto_write = false;
   for (int i=0; i<NUM_PIXELS; i++) {
-    // jan's neopixels are GRB
-    pixels[i].g = color >> 16 & 0xff;
-    pixels[i].r = color >>  8 & 0xff;
-    pixels[i].b = color       & 0xff;
+    neo_set_pixel(i, color);
   }
-  if (auto_write) ws2812_setleds(pixels, NUM_PIXELS);
+  auto_write = current;
+  if (auto_write) neo_show();
 }
 /****************************************************************************
  * @brief Set specified pixel to specified color.
  * @param i The 0 based pixel index.
  * @param color The 32 bit color value.
  ***************************************************************************/
-void pixel_set_color(uint8_t i, uint32_t color) {
+void neo_set_pixel(uint8_t i, uint32_t color) {
+  // jan's neopixels are GRB
   pixels[i].g = color >> 16 & 0xff;
   pixels[i].r = color >>  8 & 0xff;
   pixels[i].b = color       & 0xff;
-  if (auto_write) ws2812_setleds(pixels, NUM_PIXELS);
+  if (auto_write) neo_show();
+}
+
+/****************************************************************************
+ * @brief Set the four "tentacles" to specified color.
+ * @param color The 32 bit color value.
+ ***************************************************************************/
+void neo_set_tentacles(uint32_t color) {
+  bool current = auto_write;
+  auto_write = false;  
+  neo_set_pixel(TENTACLE_1, color);
+  neo_set_pixel(TENTACLE_2, color);
+  neo_set_pixel(TENTACLE_3, color);
+  neo_set_pixel(TENTACLE_4, color);
+  auto_write = current;
+  neo_show();
+}
+
+/****************************************************************************
+ * @brief Set the "aura" to specified color.
+ * @param color The 32 bit color value.
+ ***************************************************************************/
+void neo_set_aura(uint32_t color) {
+  neo_set_pixel(AURA, color);
+  if (!auto_write) neo_show();
+}
+
+/****************************************************************************
+ * @brief Set brightness.
+  ***************************************************************************/
+void neo_set_brightness(float value) {
+  brightness = value;
+}
+
+/****************************************************************************
+ * @brief Write out current NeoPixel data.
+  ***************************************************************************/
+void neo_show() {
+  for (int i=0; i<NUM_PIXELS; i++) {
+    pixels[i].r *= brightness;
+    pixels[i].g *= brightness;
+    pixels[i].b *= brightness;
+  }
+  ws2812_setleds(pixels, NUM_PIXELS);  
+}
+
+/****************************************************************************
+ * @brief Circular color value generator.
+ * @param pos The wheel position, 0-255.
+ * @param scale Brightness, 0 to 1.
+ * @return The 32 bit color value.
+ ***************************************************************************/
+uint32_t color_wheel(uint8_t pos) {
+  uint32_t r, g, b;
+  pos = 255 - pos;
+  if (pos < 85) {
+    r = 255 - pos * 3;
+    g = 0;
+    b = pos * 3;
+  } else if (pos < 170) {
+    pos -= 85;
+    r = 0;
+    g = pos * 3;
+    b = 255 - pos * 3;
+  } else {
+    pos -= 170;
+    r = pos * 3;
+    g = 255 - pos * 3;
+    b = 0;
+  }
+  return r << 16 | g << 8 | b;
 }
 
 /****************************************************************************
  * @brief A dance light pattern
  ***************************************************************************/
 void light_dance() {
+/*
   uint8_t current = auto_write;
   auto_write = 1;
   pixels_fill(0);
@@ -83,19 +143,5 @@ void light_dance() {
     pixels_fill(0);
   }
   auto_write = current;
-}
-
-/****************************************************************************
- * @brief Set the "tentacles" to specified color.
- * @param color The 32 bit color value.
- ***************************************************************************/
-void set_tentacles(uint32_t color) {
-  uint8_t current = auto_write;
-  auto_write = 0;  
-  pixel_set_color(0, color);
-  pixel_set_color(1, color);
-  pixel_set_color(3, color);
-  pixel_set_color(4, color);
-  ws2812_setleds(pixels, NUM_PIXELS);
-  auto_write = current;
+*/
 }
