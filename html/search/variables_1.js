@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['g_65',['g',['../structc_r_g_b.html#a84e5f43ab418dee85d1e436805b24c89',1,'cRGB::g()'],['../structc_r_g_b_w.html#ab8086b0c6122b139d1eb85b8630654e9',1,'cRGBW::g()']]]
+  ['b_66',['b',['../structc_r_g_b.html#a19133ec0c114bdb3a9e9a0daeb718d2f',1,'cRGB::b()'],['../structc_r_g_b_w.html#a76329bb0adf543685387dc875231a4de',1,'cRGBW::b()']]]
 ];

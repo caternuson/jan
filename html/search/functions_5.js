@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['pixel_5fset_5fcolor_57',['pixel_set_color',['../neopixels_8c.html#a0b41d13ea2e06511034f67f9a48cda14',1,'pixel_set_color(uint8_t i, uint32_t color):&#160;neopixels.c'],['../neopixels_8h.html#a0b41d13ea2e06511034f67f9a48cda14',1,'pixel_set_color(uint8_t i, uint32_t color):&#160;neopixels.c']]],
-  ['pixels_5ffill_58',['pixels_fill',['../neopixels_8c.html#a7fefb5f726e78ab9c006cccf5587f955',1,'pixels_fill(uint32_t color):&#160;neopixels.c'],['../neopixels_8h.html#a7fefb5f726e78ab9c006cccf5587f955',1,'pixels_fill(uint32_t color):&#160;neopixels.c']]]
+  ['read_5fadc_60',['read_ADC',['../adc_8c.html#ac7d3e9c43b34de2ffcb3f91508a127d6',1,'read_ADC(uint8_t mux):&#160;adc.c'],['../adc_8h.html#ac7d3e9c43b34de2ffcb3f91508a127d6',1,'read_ADC(uint8_t mux):&#160;adc.c']]],
+  ['read_5flight_61',['read_light',['../light_8c.html#aadfbc5f706370502e4ab79640781f2a2',1,'read_light():&#160;light.c'],['../light_8h.html#aadfbc5f706370502e4ab79640781f2a2',1,'read_light():&#160;light.c']]],
+  ['read_5ftemperature_62',['read_temperature',['../temperature_8c.html#a464ed47a05043b3927513a2052d41441',1,'read_temperature():&#160;temperature.c'],['../temperature_8h.html#a464ed47a05043b3927513a2052d41441',1,'read_temperature():&#160;temperature.c']]]
 ];

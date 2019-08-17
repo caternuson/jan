@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['w_67',['w',['../structc_r_g_b_w.html#abfc0000c92f6417e02073f2b751aa178',1,'cRGBW']]]
+  ['pixels_68',['pixels',['../neopixels_8h.html#a168f252c8fadc900513dca14531d03e8',1,'neopixels.h']]]
 ];
