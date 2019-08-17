@@ -5,7 +5,7 @@
  ***************************************************************************/
 #include "neopixels.h"
 
-uint8_t auto_write = 0; /**< Control auto writing of NeoPixel data
+uint8_t auto_write = 0; //!< Control auto writing of NeoPixel data
 
 /****************************************************************************
  * @brief Circular color value generator.
