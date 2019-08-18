@@ -43,9 +43,9 @@ void neo_fill(uint32_t color) {
  ***************************************************************************/
 void neo_set_pixel(uint8_t i, uint32_t color) {
   // jan's neopixels are GRB
-  pixels[i].g = color >> 16 & 0xff;
-  pixels[i].r = color >>  8 & 0xff;
-  pixels[i].b = color       & 0xff;
+  pixel_rgb[i].g = color >> 16 & 0xff;
+  pixel_rgb[i].r = color >>  8 & 0xff;
+  pixel_rgb[i].b = color       & 0xff;
   if (auto_write) neo_show();
 }
 
@@ -85,11 +85,11 @@ void neo_set_brightness(float value) {
   ***************************************************************************/
 void neo_show() {
   for (int i=0; i<NUM_PIXELS; i++) {
-    pixels[i].r *= brightness;
-    pixels[i].g *= brightness;
-    pixels[i].b *= brightness;
+    pixel_buf[i].r = brightness * pixel_rgb[i].r;
+    pixel_buf[i].g = brightness * pixel_rgb[i].g;
+    pixel_buf[i].b = brightness * pixel_rgb[i].b;
   }
-  ws2812_setleds(pixels, NUM_PIXELS);  
+  ws2812_setleds(pixel_buf, NUM_PIXELS);  
 }
 
 /****************************************************************************

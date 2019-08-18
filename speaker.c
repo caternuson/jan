@@ -9,10 +9,6 @@
  * @brief Initialize OCR
  ***************************************************************************/
 void spk_init() {
-  // set pin to output and initially low
-  //DDRB |= (1 << PB1);
-  //PORTB &= ~(1 << PB1);
-
   // enable OC0B toggle on compare match, set CTC mode
   TCCR0A |= (1 << COM0B0) | (1 << WGM01);
 

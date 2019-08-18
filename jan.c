@@ -54,11 +54,27 @@ int main() {
   //neo_set_brightness(0.1);
   //neo_set_aura(0xDEAD42);
 
+  neo_set_autowrite(false);
+  neo_show();
+  _delay_ms(1000);
+  neo_set_autowrite(true);
+  neo_set_pixel(0, 0xFF0000);
+  _delay_ms(1000);
+  neo_set_pixel(1, 0x00FF00);
+  _delay_ms(1000);
+  neo_set_pixel(2, 0x0000FF);
+  _delay_ms(1000);
+  neo_set_pixel(3, 0xFF00FF);
+  _delay_ms(1000);
+  neo_set_pixel(4, 0xFFFF00);
+  _delay_ms(1000);
+
   while (1) {
     for (int i=0; i<256; i++) {
       neo_set_aura(color_wheel(255-i));
+      _delay_ms(1000);
       neo_set_tentacles(color_wheel(i));
-      _delay_ms(50);
+      _delay_ms(1000);
     }
 
   }

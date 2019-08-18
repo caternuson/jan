@@ -2,9 +2,13 @@ Hardware layout
 ---------------
 `[attiny85]---SPI---[dragon]---USB---[linux host]`
 
-Software layout
+Software layout (debug)
 ---------------
-`[HW]---[avarice]---TCP---[avr-gdb]`
+`[dragon]---[avarice]---TCP---[avr-gdb]`
+
+Software layout (program)
+---------------
+`[dragon]---[avrdude]`
 
 Command Line
 ------------

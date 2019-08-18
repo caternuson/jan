@@ -19,7 +19,8 @@
 #define TENTACLE_4 4
 
 #define NUM_PIXELS 5            //!< The number of NeoPixels
-struct cRGB pixels[NUM_PIXELS]; //!< The array of NeoPixel data
+struct cRGB pixel_rgb[NUM_PIXELS]; //!< The array of NeoPixel color data
+struct cRGB pixel_buf[NUM_PIXELS]; //!< The brightness adjusted colors
 
 void neo_set_autowrite(bool value);
 bool neo_get_autowrite();
