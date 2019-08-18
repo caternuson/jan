@@ -31,22 +31,15 @@
  * @return exit status code
  ***************************************************************************/
 int main() {
-  init_pins();      // general pin setup
-  init_ADC();       // for reading light and temperature
+  init_pins();  // general pin setup
+  init_ADC();   // for reading light and temperature
   spk_init();   // for making noise
 
-  spk_on();
-  spk_set(10);
-  _delay_ms(500);
-  spk_set(20);
-  _delay_ms(500);
-  spk_set(30);
-  _delay_ms(500);
-  spk_set(40);
-  _delay_ms(500);
-  spk_set(50);
-  _delay_ms(500);  
-  spk_off();
+  spk_play_tone(NOTE_D4, 500);
+  spk_play_tone(NOTE_E4, 500);
+  spk_play_tone(NOTE_C4, 500);
+  spk_play_tone(NOTE_C3, 500);
+  spk_play_tone(NOTE_G4, 2000);
 
   while (1) {
     for (int i=0; i<256; i++) {
