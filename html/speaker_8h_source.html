@@ -70,18 +70,31 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define __speaker_h__</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;avr/io.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="speaker_8h.html#ad3118c19d7689dd77a27fd270209a5b8">spk_init</a>();</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="speaker_8h.html#a40dd27850219f9f557b721bb07348d0e">spk_set</a>(uint8_t value);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="speaker_8h.html#a774f4186d386bf4cbbec1bca86975d4b">spk_on</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="speaker_8h.html#a6a4e6a3e98334ea2c15252b344b6499b">spk_off</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __DELAY_BACKWARD_COMPATIBLE__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;util/delay.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define NOTE_C3 130.81</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define NOTE_C4 261.64</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define NOTE_D4 293.66</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define NOTE_E4 329.63</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define NOTE_F4 349.23</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define NOTE_G4 392.00</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define NOTE_A4 440.00</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define NOTE_B4 493.88</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="speaker_8h.html#ad3118c19d7689dd77a27fd270209a5b8">spk_init</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="speaker_8h.html#a40dd27850219f9f557b721bb07348d0e">spk_set</a>(uint8_t value);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="speaker_8h.html#ae421f23122ca6b2da2bfce309b666888">spk_play_tone</a>(<span class="keywordtype">float</span> freq, <span class="keywordtype">int</span> delay);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="speaker_8h.html#a774f4186d386bf4cbbec1bca86975d4b">spk_on</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="speaker_8h.html#a6a4e6a3e98334ea2c15252b344b6499b">spk_off</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aspeaker_8h_html_a40dd27850219f9f557b721bb07348d0e"><div class="ttname"><a href="speaker_8h.html#a40dd27850219f9f557b721bb07348d0e">spk_set</a></div><div class="ttdeci">void spk_set(uint8_t value)</div><div class="ttdoc">Set buzzer to specified value.</div><div class="ttdef"><b>Definition:</b> speaker.c:24</div></div>
-<div class="ttc" id="aspeaker_8h_html_a6a4e6a3e98334ea2c15252b344b6499b"><div class="ttname"><a href="speaker_8h.html#a6a4e6a3e98334ea2c15252b344b6499b">spk_off</a></div><div class="ttdeci">void spk_off()</div><div class="ttdoc">Turn buzzer off.</div><div class="ttdef"><b>Definition:</b> speaker.c:37</div></div>
-<div class="ttc" id="aspeaker_8h_html_ad3118c19d7689dd77a27fd270209a5b8"><div class="ttname"><a href="speaker_8h.html#ad3118c19d7689dd77a27fd270209a5b8">spk_init</a></div><div class="ttdeci">void spk_init()</div><div class="ttdoc">Initialize OCR.</div><div class="ttdef"><b>Definition:</b> speaker.c:9</div></div>
-<div class="ttc" id="aspeaker_8h_html_a774f4186d386bf4cbbec1bca86975d4b"><div class="ttname"><a href="speaker_8h.html#a774f4186d386bf4cbbec1bca86975d4b">spk_on</a></div><div class="ttdeci">void spk_on()</div><div class="ttdoc">Turn buzzer on.</div><div class="ttdef"><b>Definition:</b> speaker.c:30</div></div>
+<div class="ttc" id="aspeaker_8h_html_a40dd27850219f9f557b721bb07348d0e"><div class="ttname"><a href="speaker_8h.html#a40dd27850219f9f557b721bb07348d0e">spk_set</a></div><div class="ttdeci">void spk_set(uint8_t value)</div><div class="ttdoc">Set buzzer to specified value.</div><div class="ttdef"><b>Definition:</b> speaker.c:34</div></div>
+<div class="ttc" id="aspeaker_8h_html_ae421f23122ca6b2da2bfce309b666888"><div class="ttname"><a href="speaker_8h.html#ae421f23122ca6b2da2bfce309b666888">spk_play_tone</a></div><div class="ttdeci">void spk_play_tone(float freq, int delay)</div><div class="ttdoc">Play tone of specified frequency and duration.</div><div class="ttdef"><b>Definition:</b> speaker.c:42</div></div>
+<div class="ttc" id="aspeaker_8h_html_a6a4e6a3e98334ea2c15252b344b6499b"><div class="ttname"><a href="speaker_8h.html#a6a4e6a3e98334ea2c15252b344b6499b">spk_off</a></div><div class="ttdeci">void spk_off()</div><div class="ttdoc">Turn buzzer off.</div><div class="ttdef"><b>Definition:</b> speaker.c:62</div></div>
+<div class="ttc" id="aspeaker_8h_html_ad3118c19d7689dd77a27fd270209a5b8"><div class="ttname"><a href="speaker_8h.html#ad3118c19d7689dd77a27fd270209a5b8">spk_init</a></div><div class="ttdeci">void spk_init()</div><div class="ttdoc">Initialize Timer/Counter.</div><div class="ttdef"><b>Definition:</b> speaker.c:9</div></div>
+<div class="ttc" id="aspeaker_8h_html_a774f4186d386bf4cbbec1bca86975d4b"><div class="ttname"><a href="speaker_8h.html#a774f4186d386bf4cbbec1bca86975d4b">spk_on</a></div><div class="ttdeci">void spk_on()</div><div class="ttdoc">Turn buzzer on.</div><div class="ttdef"><b>Definition:</b> speaker.c:55</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

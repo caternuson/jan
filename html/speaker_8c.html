@@ -75,11 +75,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad3118c19d7689dd77a27fd270209a5b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="speaker_8c.html#ad3118c19d7689dd77a27fd270209a5b8">spk_init</a> ()</td></tr>
-<tr class="memdesc:ad3118c19d7689dd77a27fd270209a5b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize OCR.  <a href="speaker_8c.html#ad3118c19d7689dd77a27fd270209a5b8">More...</a><br /></td></tr>
+<tr class="memdesc:ad3118c19d7689dd77a27fd270209a5b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Timer/Counter.  <a href="speaker_8c.html#ad3118c19d7689dd77a27fd270209a5b8">More...</a><br /></td></tr>
 <tr class="separator:ad3118c19d7689dd77a27fd270209a5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40dd27850219f9f557b721bb07348d0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="speaker_8c.html#a40dd27850219f9f557b721bb07348d0e">spk_set</a> (uint8_t value)</td></tr>
 <tr class="memdesc:a40dd27850219f9f557b721bb07348d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set buzzer to specified value.  <a href="speaker_8c.html#a40dd27850219f9f557b721bb07348d0e">More...</a><br /></td></tr>
 <tr class="separator:a40dd27850219f9f557b721bb07348d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae421f23122ca6b2da2bfce309b666888"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="speaker_8c.html#ae421f23122ca6b2da2bfce309b666888">spk_play_tone</a> (float freq, int delay)</td></tr>
+<tr class="memdesc:ae421f23122ca6b2da2bfce309b666888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play tone of specified frequency and duration.  <a href="speaker_8c.html#ae421f23122ca6b2da2bfce309b666888">More...</a><br /></td></tr>
+<tr class="separator:ae421f23122ca6b2da2bfce309b666888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a774f4186d386bf4cbbec1bca86975d4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="speaker_8c.html#a774f4186d386bf4cbbec1bca86975d4b">spk_on</a> ()</td></tr>
 <tr class="memdesc:a774f4186d386bf4cbbec1bca86975d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn buzzer on.  <a href="speaker_8c.html#a774f4186d386bf4cbbec1bca86975d4b">More...</a><br /></td></tr>
 <tr class="separator:a774f4186d386bf4cbbec1bca86975d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,7 +109,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initialize OCR. </p>
+<p>Initialize Timer/Counter. </p>
 
 </div>
 </div>
@@ -130,6 +133,43 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The buzzer value, 0-255. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae421f23122ca6b2da2bfce309b666888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae421f23122ca6b2da2bfce309b666888">&#9670;&nbsp;</a></span>spk_play_tone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void spk_play_tone </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>freq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delay</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Play tone of specified frequency and duration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freq</td><td>Tone frequency in Hz. </td></tr>
+    <tr><td class="paramname">delay</td><td>Tone duration in ms. </td></tr>
   </table>
   </dd>
 </dl>
