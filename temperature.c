@@ -9,6 +9,6 @@
  * @brief Read the temperature sensor value.
  * @return Raw ADC reading from temperature.
  ***************************************************************************/
-uint8_t read_temperature() {
+uint8_t temp_get() {
   return read_ADC(TEMPERATURE_MUX);
 }

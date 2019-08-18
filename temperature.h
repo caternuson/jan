@@ -10,6 +10,7 @@
 #include "adc.h"
 
 #define TEMPERATURE_MUX 0x02
-uint8_t read_temperature();
+
+uint8_t temp_get();
 
 #endif
