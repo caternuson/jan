@@ -11,5 +11,5 @@
  * @return The raw ADC counts.
  ***************************************************************************/
 uint8_t read_light() {
-  return read_ADC(0x01);
+  return read_ADC(LIGHT_MUX);
 }

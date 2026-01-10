@@ -7,6 +7,8 @@
 
 bool auto_write = true; //!< Control auto writing of NeoPixel data
 float brightness = 0.1; //!< NeoPixel brightness
+struct cRGB pixel_rgb[NUM_PIXELS]; //!< The array of NeoPixel color data
+struct cRGB pixel_buf[NUM_PIXELS]; //!< The brightness adjusted colors
 
 /****************************************************************************
  * @brief Set auto write state.
@@ -55,13 +57,13 @@ void neo_set_pixel(uint8_t i, uint32_t color) {
  ***************************************************************************/
 void neo_set_tentacles(uint32_t color) {
   bool current = auto_write;
-  auto_write = false;  
+  auto_write = false;
   neo_set_pixel(TENTACLE_1, color);
   neo_set_pixel(TENTACLE_2, color);
   neo_set_pixel(TENTACLE_3, color);
   neo_set_pixel(TENTACLE_4, color);
   auto_write = current;
-  neo_show();
+  if (auto_write) neo_show();
 }
 
 /****************************************************************************
@@ -70,7 +72,6 @@ void neo_set_tentacles(uint32_t color) {
  ***************************************************************************/
 void neo_set_aura(uint32_t color) {
   neo_set_pixel(AURA, color);
-  if (!auto_write) neo_show();
 }
 
 /****************************************************************************
@@ -89,13 +90,12 @@ void neo_show() {
     pixel_buf[i].g = brightness * pixel_rgb[i].g;
     pixel_buf[i].b = brightness * pixel_rgb[i].b;
   }
-  ws2812_setleds(pixel_buf, NUM_PIXELS);  
+  ws2812_setleds(pixel_buf, NUM_PIXELS);
 }
 
 /****************************************************************************
  * @brief Circular color value generator.
  * @param pos The wheel position, 0-255.
- * @param scale Brightness, 0 to 1.
  * @return The 32 bit color value.
  ***************************************************************************/
 uint32_t color_wheel(uint8_t pos) {

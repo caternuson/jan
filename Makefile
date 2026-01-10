@@ -51,8 +51,8 @@ $(PROJECT).elf : $(OBJS)
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $(PROJECT).elf $(OBJS)
 
 %o : %c
-	$(CC) -c $(CFLAGS) $< -o $@ 
-	
+	$(CC) -c $(CFLAGS) $< -o $@
+
 clean:
 	rm -rf *.o *.elf *.hex
 
