@@ -37,7 +37,7 @@ uint8_t temp;
 float avg;
 
 /****************************************************************************
- * @brief The main enty point.
+ * @brief The main entry point.
  * @return exit status code
  ***************************************************************************/
 int main() {

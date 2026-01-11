@@ -31,7 +31,7 @@
 
 #include "adc.h"
 
-#define LIGHT_MUX 0x01  // ADC1 (PB2)
+#define LIGHT_ADC_CHAN ADC_SE_CHAN1
 
 uint8_t read_light();
 

@@ -26,17 +26,14 @@ void init_ADC() {
 }
 
 /****************************************************************************
- * @brief Read the supplied ADC channel.
+ * @brief Read ADC.
  *
- * @param mux The ADC channel to read.
+ * @param mux The ADC mux setting.
  * @return The ADC reading in raw counts. Range is 0 to 255.
  ***************************************************************************/
 uint8_t read_ADC(uint8_t mux) {
-  // clear mux
-  ADMUX &= 0b11110000;
-
   // set mux
-  ADMUX |= mux;
+  ADMUX = (ADMUX & 0b11110000) | mux;
 
   // start conversion
   ADCSRA |= (1 << ADSC);

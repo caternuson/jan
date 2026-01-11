@@ -29,7 +29,7 @@
 #include <avr/io.h>
 #include "adc.h"
 
-#define TEMPERATURE_MUX 0x02  // ADC2 (PB4)
+#define TEMP_ADC_CHAN ADC_SE_CHAN2
 
 uint8_t temp_get();
 
